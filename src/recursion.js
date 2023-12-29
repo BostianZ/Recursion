@@ -11,6 +11,8 @@ function fibsIteration(n) {
   return arr;
 }
 
+//Need to make this print sequence of numbers in regards to the value of n
+//EX: fibsRec(7) => [0,1,1,2,3,5,8,13];
 function fibsRec(n) {
     
     if (n < 2) {
