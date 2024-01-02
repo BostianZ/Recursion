@@ -12,16 +12,16 @@ function fibsIteration(n) {
   return arr;
 }
 
-//Need to make this print sequence of numbers in regards to the value of n
-//EX: fibsRec(7) => [0,1,1,2,3,5,8,13];
 function fibsRec(n) {
-    
-    if (n < 2) {
-        return n;
-    }
-
-    return fibsRec(n-1) + fibsRec(n-2);
-
+  if (n <= 2) {
+    return [0, 1]
+  } else {
+    let previousArr = fibsRec(n-1);
+    previousArr.push(previousArr[previousArr.length-1] + previousArr[previousArr.length-2]);
+    return previousArr;
+  }
 }
 
 export { fibsIteration, fibsRec };
+
+
